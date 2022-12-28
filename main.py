@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 import lotka
 import numpy as np
@@ -6,17 +7,23 @@ st.set_page_config(layout="wide")
 
 st.markdown("<h1 style='text-align: center'>Równanie różniczkowe Lotki-Volterry</h1>", unsafe_allow_html=True)
 
-inputs, outputs = st.columns([1, 3])
+inputs, outputs = st.columns([2, 5])
 with inputs:
-    alpha = st.slider('Alpha', 0, 10, 1)
-    beta = st.slider('beta', 0, 10, 1)
-    delta = st.slider('delta', 0, 10, 1)
-    gamma = st.slider('gamma', 0, 10, 1)
+    alpha = st.slider('Alpha - birth rate of prey', 0.0, 1.0, 0.01)
+    beta = st.slider('Beta - death rate of prey due to predators', 0.0, 1.0, 0.01)
+    delta = st.slider('Delta - natural death rate of predators', 0.0, 1.0, 0.01)
+    gamma = st.slider('gamma - factor that describes how many eaten preys give birth to a new predator', 0.0, 1.0, 0.01)
 
 with outputs:
     tab1, tab2, tab3 = st.tabs(["📈 Wykres", "📈 Wykres fazowy", "📈 Pole wektorowe"])
+    x = lotka.points()[0]
+    y = lotka.points()[1]
+    data = pd.DataFrame({
+        "prey": x,
+        "predator": y
+    })
     with tab1:
-        st.image('diagram.png')
+        st.line_chart(data)
 
     with tab2:
         st.image('faze.png')
