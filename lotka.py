@@ -1,9 +1,9 @@
 import numpy as np
-import pandas as pd
+from numpy import *
 import matplotlib.pyplot as plt
 from scipy import integrate
-import ipywidgets as ipw
-
+import pandas as pd
+import pylab as p
 
 """" definition of lotka-volterra parameters """
 # birth rate of prey
@@ -36,36 +36,40 @@ def lotka_volterra(animals, t, alpha, beta, delta, gamma):
     return np.array([dxdt, dydt])
 
 
-def points():
+def wykres(alpha, beta, delta, gamma):
     X0 = [x0, y0]
     res = integrate.odeint(lotka_volterra, X0, time, args=(alpha, beta, delta, gamma))
     x, y = res.T
-    return [x, y]
+    data = pd.DataFrame({
+        "prey": x,
+        "predator": y
+    })
+    return data
+
+def lotka_volterra2(animals):
+    prey, predator = animals
+    dxdt = prey * (alpha - (beta * predator))
+    dydt = predator * (-gamma + (delta * prey))
+    return np.array([dxdt, dydt])
 
 
-x = points()[0]
-y = points()[1]
-plt.plot(time, x)
-plt.plot(time, y)
-plt.xlabel('Time')
-plt.ylabel('Population Size')
-plt.legend(('Rabbits', 'Foxes'))
-plt.title('Deterministic Lotka-Volterra')
+vector_origin_x, vector_origin_y = np.meshgrid(np.linspace(1, 5000, 25), np.linspace(1, 5000, 25))
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(1, 1, 1)
+ax.scatter(vector_origin_x, vector_origin_y, s=1, c='red')
+fig.show()
+
+dprey = lotka_volterra2([vector_origin_x, vector_origin_y])[0]
+dpredator = lotka_volterra2([vector_origin_x, vector_origin_y])[1]
+normalisation = np.sqrt(dprey**2 + dpredator**2)
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(1, 1, 1)
+ax.quiver(vector_origin_x, vector_origin_y, dprey/normalisation, dpredator/normalisation, angles='xy')
+
+ax.axis('equal')
+ax.set_title("Lotka Volterra predator prey vector field")
+ax.set_xlabel("Prey Population")
+ax.set_ylabel("Predator Population")
 plt.show()
 
-plt.plot(x, y)
-plt.xlabel('Fox Population')
-plt.ylabel('Rabbit Population')
-plt.title('Phase Portrait of Deterministic Lotka-Volterra')
-plt.show()
 
-plt.figure()
-IC = np.linspace(1.0, 6.0, 21) # initial conditions for deer population (prey)
-X0 = [x0, y0]
-Xs = integrate.odeint(lotka_volterra, X0, time, args = (alpha, beta, delta, gamma))
-plt.plot(Xs[:,0], Xs[:,1], "-", label = "$x_0 =$"+str(X0[0]))
-plt.xlabel("Deer")
-plt.ylabel("Wolves")
-plt.legend()
-plt.title("Deer vs Wolves");
-plt.show()
