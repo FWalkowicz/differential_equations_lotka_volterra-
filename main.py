@@ -1,7 +1,7 @@
-import pandas as pd
 import streamlit as st
 import lotka
-import numpy as np
+from pathlib import Path
+from PIL import Image
 
 st.set_page_config(layout="wide")
 
@@ -27,28 +27,20 @@ with inputs:
 
 
 with outputs:
-    tab1, tab2, tab3 = st.tabs(["📈 Wykres", "📈 Wykres fazowy", "📈 Pole wektorowe"])
-    with tab1:
-        st.line_chart(lotka.wykres(alpha, beta, delta, gamma))
-
-    with tab2:
-        st.image("faze.png")
+    st.line_chart(lotka.wykres(alpha, beta, delta, gamma))
 
 
 with st.container():
     st.markdown(
-        "<h1 style='text-align: center'>Równanie różniczkowe Lotki-Volterry zwane także układ drapieżnik ofiara</h1>",
+        "<h1 style='text-align: center'>Równania Lotki-Volterry zwane także układ drapieżnik-ofiara</h1>",
         unsafe_allow_html=True,
     )
-    st.markdown("In this section we consider more realistic models that take into account the interaction of two species in the same habitat. We will see that these models take theform of a pair of linked differential equations.")
-    st.markdown("Examples of prey and predators include ")
-    st.markdown("- rabbits and wolves in an isolated forest, ")
-    st.markdown("- food-fish and sharks, ")
-    st.markdown("- aphids and ladybugs, ")
-    st.markdown("- bacteria and amoebas")
-    st.markdown("## The Lotka-Volterra Equations")
-    st.markdown("![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/79752d662d4760abcc84c6f0bb94d708f17ff442)")
-    st.markdown("### Defining the equations\n From the above equation, the parameters can be thought of as the following:\n")
-    st.markdown("* $\\frac{dx}{dt}$ = growth rate of rabbit population\n * $\\frac{dy}{dt}$ = growth rate of fox population\n")
-    st.markdown("* $x$ = prey population \n * $y$ = predator population\n \n * $\\alpha$ = growth rate of prey\n * $\\beta$ = death rate of prey due to predatation \n * $\\gamma$ = natural death rate of predator\n * $\\delta$ = factor describing how many consumed prey create a new predator\n")
-    st.markdown( "### Physical Meaning of the Equations\n")
+    def read_markdown_file(markdown_file):
+        return Path(markdown_file).read_text()
+
+    intro_markdown = read_markdown_file("Treść do mówienia.md")
+    st.markdown(intro_markdown, unsafe_allow_html=True)
+    image = Image.open('320882178_2164821780369367_5264403790324036163_n.png')
+    image2 = Image.open('321084715_3494783160794414_5211654160384390375_n.png')
+    st.image(image, width=600)
+    st.image(image2, width=600)

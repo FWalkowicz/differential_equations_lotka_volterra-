@@ -22,7 +22,7 @@ time = np.linspace(0, end_time, samples)
 
 # initial population
 # prey
-x0 = 5
+x0 = 10
 # predator
 y0 = 2
 
