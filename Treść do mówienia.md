@@ -35,7 +35,7 @@ Opisz ofiary:
 
 Opis drapieżnika:
 -  tempo wzrostu populacji drapieżnika jest reprezentowane przez: $\delta \times xy$
--  
+-  ilość zjedzonych ofiar do rozwoju populacji opisuje $\gamma y$
 
 Rozwiązaniem tego układu jest para funkcji, które opisują populację obu tych gatunków w funkcji czasu.
 Podsumowując:
