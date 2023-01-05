@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="940ae17b-6fe5-4bc4-ac41-54fcdfa3f088" name="Changes" comment="Zakończone&#10;&#10;Działa poprawnie oraz dodane opisy">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treść do mówienia.md" beforeDir="false" afterPath="$PROJECT_DIR$/Treść do mówienia.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fe4aebf0-fdb3-4f0e-9e79-99eb3f3e2dd4" />
+        <option name="url" value="https://github.com/FWalkowicz/differential_equations_lotka_volterra-.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2J0kEpHH5ln8doDkF4qN0zfFPvc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/filip/PycharmProjects/rozniczkowe/320882178_2164821780369367_5264403790324036163_n.png&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="rozniczkowe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lotka" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="rozniczkowe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.8 (rozniczkowe)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lotka.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="940ae17b-6fe5-4bc4-ac41-54fcdfa3f088" name="Changes" comment="" />
+      <created>1671222278401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671222278401</updated>
+      <workItem from="1671222280465" duration="608000" />
+      <workItem from="1671234492203" duration="779000" />
+      <workItem from="1671274495984" duration="599000" />
+      <workItem from="1671283724595" duration="599000" />
+      <workItem from="1671293165135" duration="2370000" />
+      <workItem from="1671479656125" duration="1234000" />
+      <workItem from="1671546904695" duration="1721000" />
+      <workItem from="1671552221184" duration="6242000" />
+      <workItem from="1672231921451" duration="8433000" />
+      <workItem from="1672253213505" duration="4748000" />
+      <workItem from="1672257970051" duration="370000" />
+      <workItem from="1672318303457" duration="4093000" />
+      <workItem from="1672325400652" duration="2965000" />
+      <workItem from="1672394644483" duration="1110000" />
+      <workItem from="1672691887883" duration="150000" />
+      <workItem from="1672743688158" duration="144000" />
+      <workItem from="1672744264778" duration="22000" />
+      <workItem from="1672744337327" duration="788000" />
+      <workItem from="1672779104401" duration="640000" />
+      <workItem from="1672837802793" duration="7063000" />
+      <workItem from="1672852081979" duration="144000" />
+      <workItem from="1672870220684" duration="108000" />
+      <workItem from="1672923803098" duration="626000" />
+    </task>
+    <task id="LOCAL-00001" summary="Poprawiony interfejs(dodane wykresy interaktywne),&#10;Poprawiony kod równania">
+      <created>1672258253955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672258253955</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Równanie skończone&quot;&#10;Pozostawienie 1 wykresu &#10;- wykres 1&#10;Usunięcie wykresu fazowego oraz pola wektorowego &#10;Wykresy zostaną zrobione w programie maxima i dołączone jako ss do opisu">
+      <created>1672395154281</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672395154281</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Zakończone&#10;&#10;Działa poprawnie oraz dodane opisy">
+      <created>1672852127699</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672852127699</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Poprawiony interfejs(dodane wykresy interaktywne),&#10;Poprawiony kod równania" />
+    <MESSAGE value="&quot;Równanie skończone&quot;&#10;Pozostawienie 1 wykresu &#10;- wykres 1&#10;Usunięcie wykresu fazowego oraz pola wektorowego &#10;Wykresy zostaną zrobione w programie maxima i dołączone jako ss do opisu" />
+    <MESSAGE value="Zakończone&#10;&#10;Działa poprawnie oraz dodane opisy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zakończone&#10;&#10;Działa poprawnie oraz dodane opisy" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rozniczkowe$lotka.coverage" NAME="lotka Coverage Results" MODIFIED="1672326407182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/rozniczkowe$main.coverage" NAME="main Coverage Results" MODIFIED="1671295492867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

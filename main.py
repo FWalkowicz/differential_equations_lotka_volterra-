@@ -1,42 +1,46 @@
 import streamlit as st
 import lotka
-import numpy as np
+from pathlib import Path
+from PIL import Image
 
 st.set_page_config(layout="wide")
 
-st.markdown("<h1 style='text-align: center'>Równanie różniczkowe Lotki-Volterry</h1>", unsafe_allow_html=True)
+st.markdown(
+    "<h1 style='text-align: center'>Równanie różniczkowe Lotki-Volterry</h1>",
+    unsafe_allow_html=True,
+)
 
-inputs, outputs = st.columns([1, 3])
+inputs, outputs = st.columns([2, 5])
 with inputs:
-    alpha = st.slider('Alpha', 0, 10, 1)
-    beta = st.slider('beta', 0, 10, 1)
-    delta = st.slider('delta', 0, 10, 1)
-    gamma = st.slider('gamma', 0, 10, 1)
+    alpha = st.slider("Alpha - birth rate of prey", 0.0, 1.0, 0.58, 0.01)
+    beta = st.slider(
+        "Beta - death rate of prey due to predators", 0.0, 1.0, 0.34, 0.001
+    )
+    delta = st.slider("Delta - natural death rate of predators", 0.0, 1.0, 0.12, 0.01)
+    gamma = st.slider(
+        "gamma - factor that describes how many eaten preys give birth to a new predator",
+        0.0,
+        1.0,
+        0.2,
+        0.00001,
+    )
+
 
 with outputs:
-    tab1, tab2, tab3 = st.tabs(["📈 Wykres", "📈 Wykres fazowy", "📈 Pole wektorowe"])
-    with tab1:
-        st.image('diagram.png')
-
-    with tab2:
-        st.image('faze.png')
+    st.line_chart(lotka.wykres(alpha, beta, delta, gamma))
 
 
 with st.container():
-    st.markdown("<h1 style='text-align: center'>Równanie różniczkowe Lotki-Volterry zwane także układ drapieżnik ofiara</h1>", unsafe_allow_html=True)
-    st.markdown("Rownania tego typu rozważają sytuację interakcji dwóch gatunków w tym samym środowisk. Modele te przyjmują postać pary sprzężonych równań różniczkowych.")
-    st.markdown("Przykładami układu drapieżnik-ofiara mogą być:")
-    st.markdown("- wilk i zając")
-    st.markdown("- rekiny i ryby")
-    st.markdown("- biedronki i mszyce")
-    st.markdown("- ameby i bakterie")
-    st.markdown("Przez Z(t) oznaczymy liczbę ofiar, a W(t) będzie liczbą drapieżników w chwili t.")
-    st.markdown("Przy braku drapieżnika wystarczające zasoby pożywienia prowadziłyby do wykładniczego wzrostu populacji ofiar, to znaczy: ")
-    st.latex(r'''\frac{dZ}{dt} = kZ, gdzie k jest dodatnią stałą''')
-    st.markdown("Przy braku ofiary zakładamy, że populacja drapieżnika zmniejszyłaby się wskutek śmiertelności proporcjonalnej do wielkości populacji, to znaczy: ")
-    st.latex(r'''\frac{dW}{dt} = -rW, gdzie r jest dodatnią stałą''')
-    st.markdown("Gdy oba te gatunki żyją w tym samym środowisku, zakładamy że główną przyczyną śmierci ofiar jest bycie zjedzonym przez drapieżnika. "
-                "Liczba drapieżników będzie wyznaczana dzięki dostępnemu pożywieniu czyli liczby ofiar. Zakładamy również że oba gatunki nartafiają na siebie z częstotliwością"
-                "proporcjonalną do wielkości obu populacji. Te dwa założenia pozwolą nam wyznaczyć układ równań różniczkowych: ")
-    st.latex(r'''\left{\frac{dZ}{dt}}''')
+    st.markdown(
+        "<h1 style='text-align: center'>Równania Lotki-Volterry zwane także układ drapieżnik-ofiara</h1>",
+        unsafe_allow_html=True,
+    )
+    def read_markdown_file(markdown_file):
+        return Path(markdown_file).read_text()
 
+    intro_markdown = read_markdown_file("Treść do mówienia.md")
+    st.markdown(intro_markdown, unsafe_allow_html=True)
+    image = Image.open('320882178_2164821780369367_5264403790324036163_n.png')
+    image2 = Image.open('321084715_3494783160794414_5211654160384390375_n.png')
+    st.image(image, width=600)
+    st.image(image2, width=600)
